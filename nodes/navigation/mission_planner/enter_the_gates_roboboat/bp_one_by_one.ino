@@ -1,4 +1,6 @@
 #include <Servo.h>
+#include <iostream>
+#include <thread>
 
 byte servoPin_1 = 3;
 byte servoPin_2 = 5;
@@ -32,44 +34,44 @@ void setup() {
 }
 
 void runCommand(char command) {
-  Serial.println("Spinning Motor 1 forward")
-  servo1.write(motor_forward)
-  sleep(2) //keep going for 2s
-  Serial.println("Spinning Motor 1 backward")
-  servo1.write(motor_backward)
-  sleep(2)
-  Serial.println("Stopping Motor 1")
-  servo1.write(motor_stop)
-  sleep(2)
-  Serial.println("Spinning Motor 2 forward")
-  servo2.write(motor_forward)
-  sleep(2) //keep going for 2s
-  Serial.println("Spinning Motor 2 backward")
-  servo2.write(motor_backward)
-  sleep(2)
-  Serial.println("Stopping Motor 2")
-  servo2.write(motor_stop)
-  sleep(2)
-  Serial.println("Spinning Motor 3 forward")
-  servo3.write(motor_forward)
-  sleep(2) //keep going for 2s
-  Serial.println("Spinning Motor 3 backward")
-  servo3.write(motor_backward)
-  sleep(2)
-  Serial.println("Stopping Motor 3")
-  servo3.write(motor_stop)
-  sleep(2)
-  Serial.println("Spinning Motor 4 forward")
-  servo4.write(motor_forward)
-  sleep(2) //keep going for 2s
-  Serial.println("Spinning Motor 4 backward")
-  servo4.write(motor_backward)
-  sleep(2)
-  Serial.println("Stopping Motor 4")
-  servo4.write(motor_stop)
+  Serial.println("Spinning Motor 1 forward");
+  servo1.write(motor_forward);
+  sleep(2); //keep going for 2s
+  Serial.println("Spinning Motor 1 backward");
+  servo1.write(motor_backward);
+  sleep(2);
+  Serial.println("Stopping Motor 1");
+  servo1.write(motor_stop);
+  sleep(2);
+  Serial.println("Spinning Motor 2 forward");
+  servo2.write(motor_forward);
+  sleep(2); //keep going for 2s
+  Serial.println("Spinning Motor 2 backward");
+  servo2.write(motor_backward);
+  sleep(2);
+  Serial.println("Stopping Motor 2");
+  servo2.write(motor_stop);
+  sleep(2);
+  Serial.println("Spinning Motor 3 forward");
+  servo3.write(motor_forward);
+  sleep(2); //keep going for 2s
+  Serial.println("Spinning Motor 3 backward");
+  servo3.write(motor_backward);
+  sleep(2);
+  Serial.println("Stopping Motor 3");
+  servo3.write(motor_stop);
+  sleep(2);
+  Serial.println("Spinning Motor 4 forward");
+  servo4.write(motor_forward);
+  sleep(2); //keep going for 2s
+  Serial.println("Spinning Motor 4 backward");
+  servo4.write(motor_backward);
+  sleep(2);
+  Serial.println("Stopping Motor 4");
+  servo4.write(motor_stop);
 }
 
-void main() {
+int main() {
   // Check for serial commands and execute corresponding actions
   if (Serial.available()) {
     char command = Serial.read();
