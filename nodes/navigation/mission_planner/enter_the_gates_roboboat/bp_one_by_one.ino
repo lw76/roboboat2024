@@ -69,7 +69,7 @@ void runCommand(char command) {
   servo4.write(motor_stop)
 }
 
-void loop() {
+void main() {
   // Check for serial commands and execute corresponding actions
   if (Serial.available()) {
     char command = Serial.read();
