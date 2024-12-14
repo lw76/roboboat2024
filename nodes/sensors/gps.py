@@ -2,6 +2,7 @@
 This is the preliminary documentation for Kate-Documented.
 """
 # This is a comment
+# Change
 
 from serial import Serial
 from pynmeagps import NMEAReader
