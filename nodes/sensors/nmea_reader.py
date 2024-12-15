@@ -62,7 +62,7 @@ class GPS_Reader(Node):
             self.lon_pub.publish(msg)
             print(msg)
         except:
-            '''ignore errors if longitude is missing'''
+            '''ignore errors if longitudeS is missing'''
             pass
         try:
             '''Publish heading to the corresponding topic'''
